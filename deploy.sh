@@ -1,7 +1,7 @@
 # Build the images with both git sha and latest 
 docker build -t ragabi/multi-client:latest -t ragabi/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t ragabi/multi-server:latest -t ragabi/multi-server:$SHA -f ./client/Dockerfile ./server
-docker build -t ragabi/multi-worker:latest -t ragabi/multi-worker:$SHA -f ./client/Dockerfile ./worker
+docker build -t ragabi/multi-server:latest -t ragabi/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t ragabi/multi-worker:latest -t ragabi/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 # Push the images with both git sha and latest 
 docker push ragabi/multi-client:latest
